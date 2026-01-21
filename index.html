@@ -14,33 +14,51 @@
 		<link rel="stylesheet" type="text/css" href="css/keyframes.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
-  /* Mobile full view fix - scale game to fit screen no scroll */
+  /* Balanced full view fix - fit game perfectly no scroll, readable size */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000; /* Casino dark for immersion */
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 10px;
+    box-sizing: border-box;
+  }
   @media (max-width: 1024px) {
+    html, body {
+      height: 100%;
+    }
     body {
-      zoom: 0.85; /* Slight scale down for tablets/medium phones */
-      padding: 5px 0;
-      margin: 0;
-      overflow: hidden;
-    }
-    .container {
-      max-width: 100% !important;
-      padding: 0 5px;
-    }
-    table, button, h4, p {
-      font-size: 14px !important; /* Smaller text for fit */
-    }
-    button {
-      padding: 8px 12px !important;
+      transform: scale(0.95); /* Mild scale for tablets */
+      transform-origin: top left;
+      width: 105%; /* Compensate scale */
     }
   }
   @media (max-width: 768px) {
-    body { zoom: 0.75; } /* Medium phones */
+    body {
+      transform: scale(0.9); /* Balanced for medium phones */
+      width: 111%;
+    }
+    button, h4, p {
+      font-size: 16px !important; /* Readable buttons/text */
+    }
+    button {
+      padding: 12px !important;
+    }
   }
   @media (max-width: 480px) {
-    body { zoom: 0.65; } /* Small phones - full fit */
+    body {
+      transform: scale(0.85); /* Fit small phones perfect */
+      width: 117.6%;
+    }
   }
   @media (max-width: 360px) {
-    body { zoom: 0.55; } /* Tiny screens */
+    body {
+      transform: scale(0.8);
+      width: 125%;
+    }
   }
 </style>
 </head>
