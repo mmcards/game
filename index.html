@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>blackjack</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -13,68 +12,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Lato" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/keyframes.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-<style>
-  /* Perfect balance fix - full view big readable, green table, no black/long/scroll */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #0a3d1e !important; /* Original green casino table back */
-  }
-  .container {
-    max-width: 100% !important;
-    padding: 5px !important;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  #game-board, #welcome {
-    width: 100%;
-    max-width: 100%;
-  }
-  @media (max-width: 1024px) {
-    button, h4, p, .current-wager, .current-chip-balance, .hand-total {
-      font-size: 20px !important; /* Big readable text/buttons */
-    }
-    button {
-      padding: 16px 24px !important;
-      min-height: 60px !important;
-    }
-    .card {
-      max-width: 120px !important; /* Bigger cards on tablets */
-    }
-  }
-  @media (max-width: 768px) {
-    button, h4, p {
-      font-size: 22px !important;
-    }
-    button {
-      padding: 18px 28px !important;
-      min-height: 70px !important;
-    }
-    .card {
-      max-width: 140px !important;
-    }
-  }
-  @media (max-width: 480px) {
-    button, h4, p {
-      font-size: 24px !important;
-    }
-    button {
-      padding: 20px 32px !important;
-      min-height: 80px !important;
-    }
-    .card {
-      max-width: 160px !important;
-    }
-    .container {
-      padding: 2px !important;
-    }
-  }
-</style>
 </head>
 <body>
 <div class="navbar-fixed z-depth-0">
