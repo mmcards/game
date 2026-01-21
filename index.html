@@ -14,52 +14,64 @@
 		<link rel="stylesheet" type="text/css" href="css/keyframes.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
-  /* Perfect balance fix - full view readable, no scroll/too small */
+  /* Perfect balance fix - full view big readable, green table, no black/long/scroll */
   html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #000;
+    background: #0a3d1e !important; /* Original green casino table back */
   }
   .container {
     max-width: 100% !important;
-    padding: 10px;
+    padding: 5px !important;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #game-board, #welcome {
+    width: 100%;
+    max-width: 100%;
   }
   @media (max-width: 1024px) {
-    body {
-      transform: scale(0.98);
-      transform-origin: top center;
-      width: 102%;
+    button, h4, p, .current-wager, .current-chip-balance, .hand-total {
+      font-size: 20px !important; /* Big readable text/buttons */
+    }
+    button {
+      padding: 16px 24px !important;
+      min-height: 60px !important;
+    }
+    .card {
+      max-width: 120px !important; /* Bigger cards on tablets */
     }
   }
   @media (max-width: 768px) {
-    body {
-      transform: scale(0.95);
-      width: 105%;
-    }
-    button, h4, p, .current-wager, .current-chip-balance {
-      font-size: 18px !important; /* Bigger readable text/buttons */
+    button, h4, p {
+      font-size: 22px !important;
     }
     button {
-      padding: 14px 20px !important;
-      min-height: 50px;
+      padding: 18px 28px !important;
+      min-height: 70px !important;
+    }
+    .card {
+      max-width: 140px !important;
     }
   }
   @media (max-width: 480px) {
-    body {
-      transform: scale(0.92);
-      width: 108.7%;
+    button, h4, p {
+      font-size: 24px !important;
     }
-  }
-  @media (max-width: 360px) {
-    body {
-      transform: scale(0.88);
-      width: 113.6%;
+    button {
+      padding: 20px 32px !important;
+      min-height: 80px !important;
+    }
+    .card {
+      max-width: 160px !important;
+    }
+    .container {
+      padding: 2px !important;
     }
   }
 </style>
